@@ -109,7 +109,7 @@
       .dbBox._s2 { --o: #0a3; --i: #aaa; --r: 1deg; }
       .dbBox::before { content: ''; position: absolute; inset: 4px; border: 2px solid var(--i); z-index: -1; }
 
-      .commentCard { background-color: #f5f5f5; border-radius: 8px; box-shadow: 2px 2px 4px 2px #d0d0d0; padding: 1.25rem; font-size: 1.2rem; }
+      .commentCard { background: linear-gradient( #fff, #f2f2f2 ); border-radius: 8px; box-shadow: 2px 2px 4px 2px #d0d0d0; padding: 1.25rem; font-size: 1.2rem; }
 
 
     /*=== footer ===*/
