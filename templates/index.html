@@ -140,7 +140,7 @@
             let sh = window.scrollY
             $.each( $('[js-slideFadeIn]'), (idx,ele)=>{
                 let rect = ele.getBoundingClientRect()
-                if ( wh >= rect.bottom ){
+                if ( wh >= rect.bottom || wh >= rect.top + 150 ){
                     $(ele).attr('js-slideFadeIn','show')
                 }
             })
