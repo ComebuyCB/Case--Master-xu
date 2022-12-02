@@ -80,16 +80,16 @@
                 </div>
                 <!-- <div class="imgBox" style="background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(../static/common/media/p1.webp);"></div> -->
                 <div class="container">
-                    <div class="py-4 text-end" js-slideFadeIn="top">
+                    <div class="py-3 text-end" js-slideFadeIn="top">
                         <img class="img-fluid" src="../static/common/media/p4.webp">
                     </div>
-                    <div class="py-4 pe-2" js-slideFadeIn="left">
+                    <div class="py-4 pe-4" js-slideFadeIn="left">
                         <div class="dbBox _s1">
                             對徐老師來說，客戶的評價才是最好的回饋，媒體的知名度反而不是這麼重要。分析師除了研究功力之外，還要有良好的溝通能力，才能在短時間內讓客戶獲得最清楚的訊息。
                         </div>
                     </div>
-                    <div class="py-4 ps-2" js-slideFadeIn="right">
-                        <div class="dbBox _s2 aaa ms-auto">
+                    <div class="py-4 ps-4" js-slideFadeIn="right">
+                        <div class="dbBox _s2 ms-auto">
                             由於每個分析師對上市公司著重的焦點不同，有的人重視財務面，有人注重經營策略，有人偏好市場即時訊息，分析師必須在最短時間內提出令他們滿意的答案，是一大挑戰。
                         </div>
                     </div>
@@ -97,9 +97,7 @@
             </section>
             <section class="py-5">
                 <div class="container">
-                    
                     <div class="avatar rounded-circle ratio ratio-1x1 mx-auto mb-3" style="background-image: url(../static/common/media/a3.jpg); max-width: 400px;"></div>
-
                     <div class="bigTitle mb-4" js-slideFadeIn="top">客戶評價：</div>
                     <div class="commentCard mb-4" js-slideFadeIn="left">
                         「他能夠針對每個客戶的特性做出完整的分析，這是他最成功的地方。」
@@ -109,7 +107,7 @@
                     </div>
                 </div>
             </section>
-            <section class="py-3">
+            <section class="py-4">
                 <div class="container">
                     <div class="addLine" js-slideFadeIn="zoom">
                         立即加入好友
@@ -123,12 +121,12 @@
 
         <footer>
             <div class="container pos-r">
-                <div class="lineLink"></div>
+                <a class="lineLink" href="javascript: linkTo()"></a>
             </div>
         </footer>
     </div>
     <script>
-        let sliding = false
+
 
         $(function(){
             show_timeline_content()
@@ -145,15 +143,29 @@
                 if ( wh >= rect.bottom ){
                     $(ele).attr('js-slideFadeIn','show')
                 }
-
-                if ( $(ele).hasClass('aaa') ){
-                    console.log( rect.bottom )
-                }
             })
         }
 
+        let RD5 = Math.floor( Math.random() * 5 )
+        function linkTo(){
+            let url = ''
+            switch (RD5){
+                case '0':
+                    url = ''
+                case '1':
+                    url = ''
+                case '2':
+                    url = ''
+                case '3':
+                    url = ''
+                case '4':
+                    url = ''
+                default:
+                    url = ''
+            }
 
-        
+            window.location.href = 'https://lineit.line.me/share/ui?url=' + url
+        }
     </script>
 </body>
 </html>
