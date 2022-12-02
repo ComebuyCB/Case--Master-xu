@@ -12,16 +12,13 @@
     <title></title>
 
     <!-- core -->
-    <script src="../static/core/jquery-3.5.1/jquery-3.5.1.min.js"></script>
     <link href="../static/core/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../static/core/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
 
     <!-- plugins -->
     <link href="../static/plugins/fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet">
 
     <!-- main -->
     <link href="../static/common/css/main.css" rel="stylesheet">
-    <script src="../static/common/js/main.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -95,9 +92,12 @@
                     </div>
                 </div>
             </section>
-            <section class="py-5">
+            <section class="pos-r py-5">
+                <div class="imgBox" style="background-image: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url(../static/common/media/p4.webp); background-attachment: fixed;"></div>
                 <div class="container">
-                    <div class="avatar rounded-circle ratio ratio-1x1 mx-auto mb-3" style="background-image: url(../static/common/media/a3.jpg); max-width: 400px;"></div>
+                    <div class="px-3">
+                        <div class="avatar rounded-circle ratio ratio-1x1 mx-auto mb-3" style="background-image: url(../static/common/media/a3.jpg); max-width: 400px;"></div>
+                    </div>
                     <div class="bigTitle mb-4" js-slideFadeIn="top">客戶評價：</div>
                     <div class="commentCard mb-4" js-slideFadeIn="left">
                         「他能夠針對每個客戶的特性做出完整的分析，這是他最成功的地方。」
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </section>
-            <section class="py-4">
+            <section id="lastSection" class="py-4 bg-white">
                 <div class="container">
                     <div class="addLine" js-slideFadeIn="zoom">
                         立即加入好友
@@ -125,9 +125,11 @@
             </div>
         </footer>
     </div>
+
+    <script src="../static/core/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+    <script src="../static/core/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/common/js/main.js"></script>
     <script>
-
-
         $(function(){
             show_timeline_content()
             $(window).on('scroll',()=>{
@@ -144,6 +146,9 @@
                     $(ele).attr('js-slideFadeIn','show')
                 }
             })
+            if ( sh + wh >= document.body.scrollHeight - 10 ){
+                $('#lastSection').addClass('stickyBot')
+            }
         }
 
         let RD5 = Math.floor( Math.random() * 5 )
