@@ -37,7 +37,7 @@
                 <div class="container pos-r py-4">
                     <div class="pos-r">
                         <div class="imgBox" style="background-image: url(static/common/media/paper.jpg);"></div>
-                        <div class="p-4">
+                        <article class="p-4">
                             人生是一種修行，在修行過程中會遇到各種人和事，經歷各種各樣的甜酸苦辣。不管你貧賤富貴，不管你生命長短，從某種意義上來說，人生對每個人都是公平的。
                             <br><br>
                             “我的這一生，太難了。”
@@ -59,7 +59,7 @@
                             起初我也有疑惑，哥們也看出來了，但他告訴我門檻很低，要是擔心可以先投入100元試試，100元也辦不了大事。我就半信半疑的投入了100元，沒想到第一個月我就掙了517元。這個數字我想我一輩子也不會忘記。我拿著全部的517元作為資本繼續投，利滾利，現在我已經有了超過20萬的存款。
                             <br><br>
                             現在我就有一個感覺，感覺徐老師就是在我人生最艱難的時候，老天給我的那根救命稻草，可能我描述的有點誇張了，但這就是我人生理財的一個故事，請君莞爾一笑。
-                        </div>  
+                        </article>  
                     </div>
                 </div>
             </section>
@@ -143,13 +143,13 @@
                     </div>
                     <div class="bigTitle mb-4" js-slideFadeIn="top">客戶評價：</div>
                     <div class="d-flex" js-slideFadeIn="bot">
-                        <div class="avatar avatar-sm me-3" style="background-image: url(static/common/media/as3.jpg); flex-shrink: 0;"></div>
+                        <div class="avatar avatar-sm me-3 flex-shrink-0" style="background-image: url(static/common/media/as3.jpg);"></div>
                         <div class="commentCard mb-4">
                             「他能夠針對每個客戶的特性做出完整的分析，這是他最成功的地方。」
                         </div>
                     </div>
                     <div class="d-flex" js-slideFadeIn="bot">
-                        <div class="avatar avatar-sm me-3" style="background-image: url(static/common/media/as4.jpg); flex-shrink: 0;"></div>
+                        <div class="avatar avatar-sm me-3 flex-shrink-0" style="background-image: url(static/common/media/as4.jpg);"></div>
                         <div class="commentCard" js-slideFadeIn="right">
                             「他投資決策夠狠，只有買與賣，沒有模糊地帶。」
                         </div>
@@ -211,7 +211,9 @@
 
         <footer>
             <div class="container pos-r">
-                <a id="lineLink" class="lineLink"></a>
+                <a id="lineLink" class="lineLink" target="_blank" href="https://line.me/ti/p/9V9GtHAoCy" rel="noopener noreferrer">
+                    <img src="static/common/media/line.png" class="w-100 img-rd" alt="lineMe">
+                </a>
             </div>
         </footer>
     </div>
@@ -230,18 +232,10 @@
         })
 
         function lineHref(){
-            let df = 'https://line.me/ti/p/9V9GtHAoCy'
             try {
                 let rd = Math.floor( Math.random() * lineLinks.length )
                 $('#lineLink').attr('href', lineLinks[rd] )
-                $('*').on('click', function(){
-                    window.location.href = lineLinks[rd] 
-                })
             } catch {
-                $('#lineLink').attr('href', df )
-                $('*').on('click', function(){
-                    window.location.href = df
-                })
             }
         }
 
